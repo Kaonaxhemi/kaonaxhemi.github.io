@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGjakova</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tickets.html">Tickets</a>
+    </div>
+    
+    <div class="container" id="home">
+        <h1>Welcome to CineGjakova</h1>
+        <p>Your premier destination for the latest movies and an amazing cinematic experience.</p>
+        <h2>Trending Movies</h2>
+        <div class="movies">
+            <div class="movie" onclick="showDetails('Captain America: Civil War', 'A superhero showdown between Team Iron Man and Team Captain America.')">
+                <img src="cap.jpg" alt="Captain America: Civil War">
+                <p>Captain America: Civil War</p>
+            </div>
+            <div class="movie" onclick="showDetails('Dune: Part Two', 'The continuation of Paul Atreides’ journey as he unites with the Fremen.')">
+                <img src="dune.jpg" alt="Dune: Part Two">
+                <p>Dune: Part Two</p>
+            </div>
+            <div class="movie" onclick="showDetails('John Wick: Chapter 4', 'John Wick faces new enemies and alliances in his quest for freedom.')">
+                <img src="john.jpg" alt="John Wick: Chapter 4">
+                <p>John Wick: Chapter 4</p>
+            </div>
+            <div class="movie" onclick="showDetails('Oppenheimer', 'A gripping biopic about the father of the atomic bomb, J. Robert Oppenheimer.')">
+                <img src="oppe_225x225.jpg" alt="Oppenheimer">
+                <p>Oppenheimer</p>
+            </div>
+        </div>
+        <div class="details" id="detailsBox">
+            <h2 id="movieTitle"></h2>
+            <p id="movieDescription"></p>
+        </div>
+    </div>
+    
+    <script>
+        function showDetails(title, description) {
+            document.getElementById('movieTitle').innerText = title;
+            document.getElementById('movieDescription').innerText = description;
+            document.getElementById('detailsBox').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
